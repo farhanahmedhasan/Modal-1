@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{
+  margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	line-height: 1.7;
+	font-family: 'Roboto', sans-serif;
+	height: 100vh;
+	position: relative;
+	color: #333;
+	background: linear-gradient(to top left, #28b487, #7dd56f);
+	overflow: hidden;
+}
+.buttons{
+	padding-top: 1.5rem;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+.buttons .open-modal{
+	padding: 1rem 2rem;
+	border: 0;
+	border-radius: .5rem;
+	font-size: 1.1rem;
+	cursor: pointer;
+	outline: none;
+	align-items: center;
+	z-index: 5;
+}
+.modal{
+	width: 60%;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 2rem 2rem 2rem 2rem;
+	text-align: justify; 
+	box-shadow: 0 3rem 4rem rgba(0, 0, 0, 0.3);
+	border-radius: 6px;
+	z-index: 10;
+}
+.modal .close{
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0.5rem;
+	margin: 2.5rem 2rem 0 0;
+	border: none;
+	font-size: 1.2rem;
+	cursor: pointer;
+	outline: none;
+}
+.modal h1{
+	margin-bottom: 1.275rem;
+}
+.overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(3px);
+	z-index: 1 !important;
+}
+.hidden{
+	opacity: 0;
+	transition: 0.3s opacity ease-in-out;
+}
+.modal.show{
+	opacity: 1;
+}
+.overlay.show{
+	opacity: 1;
+	z-index: 7 !important;
+}
